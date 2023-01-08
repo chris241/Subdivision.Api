@@ -1,6 +1,6 @@
 ﻿namespace Subdivision.Api.Models
 {
-    public class Village
+    public class Village:Base
     {
     }
 }
