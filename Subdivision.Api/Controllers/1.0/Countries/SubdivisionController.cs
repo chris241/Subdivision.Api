@@ -9,6 +9,7 @@ namespace Subdivision.Api.Controllers._1._0.Countries
         [HttpGet]
         public Country GetListByCountry()
         {
+
             return new Country();
         }
         [HttpGet]
