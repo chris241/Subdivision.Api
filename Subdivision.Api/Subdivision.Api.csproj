@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="DataBase\" />
-    <Folder Include="Repositories\Interfaces\" />
   </ItemGroup>
 
 </Project>

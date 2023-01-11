@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Subdivision.Api.Middlewares;
 using Subdivision.Api.Models;
+using Subdivision.Api.Repositories;
+using Subdivision.Api.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +39,7 @@ builder.Services.AddDbContext<SubdivisionDbContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
